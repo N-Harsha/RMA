@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AmenitiesInput"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commodityIN"
+            android:layout_width="match_parent"
+            android:hint="@string/name"
+            android:inputType="textCapCharacters"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+            <Button
+                android:id="@+id/increment"
+                android:layout_toRightOf="@id/quant"
+                android:layout_centerVertical="true"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:padding="0dp"
+                android:textSize="20dp"
+                android:text="+" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_toRightOf="@id/decrement"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:boxStrokeColor="@color/purple_500"
+                android:id="@+id/quant">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/quantityIN"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/quantity"
+                    android:text="0"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/decrement"
+                    android:layout_centerVertical="true"
+
+                    android:padding="0dp"
+                    android:text="-"
+                    android:textSize="25dp" />
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/add_commodity"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ADD" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+    <ListView
+        android:id="@+id/commoditiesList"
+        android:layout_width="match_parent"
+        android:layout_weight="90"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        style="?android:attr/spinnerItemStyle"
+        android:layout_margin="10sp"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/submit_tenant"
+            android:layout_centerInParent="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT" />
+    </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

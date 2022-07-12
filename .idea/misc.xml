@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2375" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/border.xml" value="0.226" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2375" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/personal_background.xml" value="0.226" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout-v28/list_item.xml" value="0.33" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_amenities_info.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_commodities_input.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_personal_info.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_professional_info.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_rental_details.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_tenant_info.xml" value="0.33" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_tenant_input.xml" value="0.33" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_transaction_input.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_vehicle_input.xml" value="0.36615384615384616" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_vehicle_input1.xml" value="0.1675925925925926" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/amenities_item.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/commodity_item.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/dropdownlistelement.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/list_item.xml" value="0.33" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/personalinfovehicles.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/transaction_item.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/layout/vehicle_item.xml" value="0.371875" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/mipmap-anydpi-v26/personal.xml" value="0.226" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/mipmap-anydpi-v26/personal_round.xml" value="0.226" />
+        <entry key="..\:/Users/harsh/AndroidStudioProjects/MyApplication/app/src/main/res/mipmap-anydpi-v26/rental_round.xml" value="0.226" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

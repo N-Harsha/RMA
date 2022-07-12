@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Tenant_Name"
+            android:layout_width="match_parent"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Tenant_Phno"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:hint="@string/phone_number"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/alt_phno"
+            android:layout_width="match_parent"
+            android:hint="@string/alternate_ph"
+            android:inputType="phone"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dno"
+            android:layout_width="match_parent"
+            android:hint="@string/door_number"
+            android:inputType="numberSigned"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/occupants"
+            android:layout_width="match_parent"
+            android:hint="@string/no_of_occupants"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/adhno"
+            android:layout_width="match_parent"
+            android:hint="@string/aadhaar_number"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/doj"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:hint="@string/doj"
+
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dueDate"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:hint="@string/due_date"
+
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rent_amount"
+            android:layout_width="match_parent"
+            android:hint="@string/rent_amount"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rent_adv"
+            android:layout_width="match_parent"
+            android:hint="@string/adv"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/occupation"
+            android:layout_width="match_parent"
+            android:hint="@string/occupation"
+            android:inputType="text"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/job_id"
+            android:layout_width="match_parent"
+            android:hint="@string/job_id"
+            android:inputType="text"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="@color/purple_500">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/perm_add"
+            android:layout_width="match_parent"
+            android:hint="@string/permanent_address"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:padding="40dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/next1"
+            android:layout_centerInParent="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/next" />
+    </RelativeLayout>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">RMA</string>
+    <string name="add_tenant">Add Tenant</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="alternate_ph">Alternate Phone Number</string>
+    <string name="door_number">Door number</string>
+    <string name="aadhaar_number">Aadhaar Number</string>
+    <string name="doj">Date Of Joining</string>
+    <string name="rent_amount">Rent Amount</string>
+    <string name="adv">No.of Months Rent Advance</string>
+    <string name="occupation">Occupation</string>
+    <string name="job_id">Job Id</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="next">Next</string>
+    <string name="Remove_button">Remove</string>
+    <string name="model">Model</string>
+    <string name="type">Type</string>
+    <string name="registration_number">Registration Number</string>
+    <string name="quantity">Quantity</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="maintenance_details">Maintenance Details</string>
+    <string name="email">Email</string>
+    <string name="no_of_occupants">No.of Occupants</string>
+    <string name="due_date">Due Date</string>
+    <string name="add_transaction">add transaction</string>
+    <string name="mode_of_transfer">Mode of Transfer</string>
+
+
+</resources>

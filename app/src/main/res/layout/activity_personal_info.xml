@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TenantInfo"
+    style="@style/AppTheme"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Details_Tenant_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img_1" />
+
+    <TextView
+        android:id="@+id/Details_Tenant_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/Details_Tenant_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:autoSizeMaxTextSize="35dp"
+        android:autoSizeMinTextSize="20dp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:text="Harsha Vardhan"
+        android:textAlignment="center"
+        style="@style/invertColor" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/basic_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Details_Tenant_name"
+        app:cardBackgroundColor="#DBF6B5"
+        app:cardCornerRadius="20dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp">
+
+            <TableRow>
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Phone Number" />
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/Tenant_Info_phno"
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:clickable="true"
+                    android:text="7032851779"
+                    android:textColor="#0000ff"
+                    android:textStyle="normal" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Alternate\nPhone Number" />
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/Tenant_Info_altphno"
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:text="9866123666"
+                    android:textColor="#0000ff"
+                    android:textStyle="normal" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:gravity="center_vertical"
+                    android:text="Email" />
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/PersonalEmail"
+                    style="@style/personal_info_style"
+                    android:layout_width="251dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:breakStrategy="simple"
+                    android:text="harsha0770@gmail.com"
+                    android:textStyle="normal" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Occupants" />
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/PersonalResidents"
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+                    android:gravity="center_vertical"
+                    android:text="4"
+                    android:textStyle="normal" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Aadhaar No." />
+
+                <TextView
+                    style="@style/personal_info_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/Personalaadhaar"
+                    style="@style/personal_info_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:text="1234 5678 9101"
+                    android:textStyle="normal" />
+            </TableRow>
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/vehicle_label"
+        style="@style/invertColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/basic_details"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:text=" Vehicles : " />
+
+    <ListView
+        android:id="@+id/personalInfoVehicles"
+        style="?android:attr/spinnerItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vehicle_label"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp" />
+</RelativeLayout>
