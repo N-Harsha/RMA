@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.rma.adapters.TenantListAdapter;
+import com.rma.items.Property;
 import com.rma.items.Tenant;
 import com.rma.myapplication.databinding.ActivityMainBinding;
 
@@ -36,15 +37,24 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int MainActivity_output=565;
     ArrayList<Tenant> al;
     TenantListAdapter la;
     ActivityMainBinding binding;
     ListView lv;
     int pos;
-
+    Property property=null;
 
     final static public String TENANT_KEY="TENANT";
     final static public String FLAG_KEY="flag";
+
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent();
+        intent.putExtra(Properties.PROPERTY_KEY,property);
+        setResult(MainActivity_output,intent);
+        super.onBackPressed();
+    }
 
     ActivityResultLauncher<Intent> activityLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -70,39 +80,11 @@ public class MainActivity extends AppCompatActivity {
                             al.set(pos,(Tenant) temp.getSerializableExtra(TENANT_KEY));
                         }
                     }
-                    save(al,"hello.ser");
                     lv.setAdapter(la);
                 }
             }
     );
 
-    public ArrayList<Tenant> load(String fileName){
-        ArrayList<Tenant> temp;
-        try{
-            FileInputStream in=getApplicationContext().openFileInput(fileName);
-            ObjectInputStream ois=new ObjectInputStream(in);
-            temp= (ArrayList<Tenant>) ois.readObject();
-            in.close();
-            ois.close();
-            return temp;
-        } catch (Exception e) {
-            temp=new ArrayList<>();
-            return temp;
-        }
-    }
-
-    public void save(Serializable data,String fileName){
-        try{
-            FileOutputStream out=getApplicationContext().openFileOutput(fileName, Context.MODE_PRIVATE);
-            ObjectOutputStream oos=new ObjectOutputStream(out);
-            oos.writeObject(data);
-            out.close();
-            oos.close();
-        } catch (IOException e) {
-            Log.d(TAG, "save:  ");
-            e.printStackTrace();
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +93,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding =ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        al = load("hello.ser");
+
+        if(getIntent()!=null&&getIntent().getExtras()!=null&&getIntent().hasExtra(Properties.PROPERTY_KEY)){
+            property = (Property) getIntent().getSerializableExtra(Properties.PROPERTY_KEY);
+        }
+        al = property.getTl();
 //        al.clear();
 //        save(al,"hello.ser");
         @SuppressLint("SimpleDateFormat") SimpleDateFormat f=new SimpleDateFormat("dd/MM/yy");

@@ -2,11 +2,16 @@ package com.rma.myapplication;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +35,8 @@ import java.util.ArrayList;
 
 public class Properties extends AppCompatActivity {
 
+    final static public String PROPERTY_KEY="PROPERTY";
+
     GridView gridView;
     ArrayList<Property> pl;
     Context context;
@@ -39,6 +46,24 @@ public class Properties extends AppCompatActivity {
     AlertDialog dialog;
     TextInputEditText name;
     Button saveButton,cancelButton;
+    int pos=0;
+
+    ActivityResultLauncher<Intent> activityLauncher=registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    Property property=null;
+                    if(result.getResultCode()==MainActivity.MainActivity_output){
+                        Intent temp=result.getData();
+                        if(temp!=null){
+                            pl.set(pos,(Property) temp.getSerializableExtra(PROPERTY_KEY));
+                        }
+                    }
+                    save(pl,"data.ser");
+                }
+            }
+    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +83,10 @@ public class Properties extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                pos=position;
+                Intent intent=new Intent(context,MainActivity.class);
+                intent.putExtra(PROPERTY_KEY,pl.get(position));
+                activityLauncher.launch(intent);
             }
         });
 
@@ -88,7 +116,7 @@ public class Properties extends AppCompatActivity {
             out.close();
             oos.close();
         } catch (IOException e) {
-            Log.d(TAG, "save:  ");
+//            Log.d(TAG, "save:  ");
             e.printStackTrace();
         }
     }
