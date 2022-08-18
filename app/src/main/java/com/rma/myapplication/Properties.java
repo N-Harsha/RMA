@@ -1,30 +1,33 @@
 package com.rma.myapplication;
 
-import static android.content.ContentValues.TAG;
-
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Environment;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.rma.adapters.PropertyAdapter;
 import com.rma.items.Property;
-import com.rma.items.Tenant;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -36,6 +39,7 @@ import java.util.ArrayList;
 public class Properties extends AppCompatActivity {
 
     final static public String PROPERTY_KEY="PROPERTY";
+    final static public int PERMISSION_REQUEST_CODE=7;
 
     GridView gridView;
     ArrayList<Property> pl;
@@ -70,6 +74,9 @@ public class Properties extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_properties2);
 
+        checkFolder();
+
+
         gridView =findViewById(R.id.properties_grid_view);
         fab=findViewById(R.id.property_add_button);
 
@@ -79,6 +86,9 @@ public class Properties extends AppCompatActivity {
 
         pa=new PropertyAdapter(context,R.layout.property_item,pl);
         gridView.setAdapter(pa);
+
+//        Log.d(TAG, "onCreate: "+context.getFilesDir());
+
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -92,6 +102,43 @@ public class Properties extends AppCompatActivity {
 
         fab.setOnClickListener(v -> createNewDialog());
 
+    }
+
+    private void checkFolder() {
+        if(ContextCompat.checkSelfPermission(Properties.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED){
+            createFolder();
+        }
+        else{
+            askPermission();
+        }
+    }
+
+    private void createFolder() {
+        File file=new File(Environment.getDataDirectory(),"RMA");
+//        File file=new File(Environment.getExternalStorageDirectory(),"RMA");
+        if(!file.exists()) {
+            file.mkdir();
+            Toast.makeText(Properties.this, "Successful....", Toast.LENGTH_SHORT).show();
+        }
+        else
+            Toast.makeText(Properties.this, "File already exists...", Toast.LENGTH_SHORT).show();
+    }
+
+    private void askPermission() {
+        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},PERMISSION_REQUEST_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode==PERMISSION_REQUEST_CODE){
+            if(grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                createFolder();
+            }
+            else{
+                Toast.makeText(Properties.this, "Permission Denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     public ArrayList<Property> load(String fileName){

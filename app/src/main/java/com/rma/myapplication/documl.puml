@@ -1,0 +1,104 @@
+@startuml
+
+Property "1" *-- "many" Tenant : contains
+Tenant..>Transactions:Dependency
+Tenant..>AutoMobiles:Dependency
+Tenant..>Amenity:Dependency
+
+
+class Property{
+    -tenantList
+    -propertyName
+    
+    +getTenantList()
+    +setTenantList()
+    +getPropertyName()
+    +setPropertyName()
+}
+
+class AutoMobiles{
+    -registrationNumber
+    -type
+    -model
+    + getRegistrationNumber()
+    + settRegistrationNumber()
+    + getType()
+    + setType()
+    + getModel()
+    + setModel()
+}
+
+
+class Amenity{
+    -quantity
+    -NameOfAmenity
+    +getQuantity()
+    +getAmenityName()
+    +settQuantity()
+    +setNameOfAmenity()
+}
+
+
+class Transactions{
+
+     -modeOfTransfer
+     -paidOn;
+    -amount;
+      +getModeOfTransfer()
+     + setMot()
+     + getPaidOn()
+     + setPaidOn()
+     + getAmount()
+     + setAmount()
+}
+
+
+class Tenant{
+    -tenantId
+    -transactionsList
+    -vehiclesList
+    -amenitiesList
+    -guardianName
+    -phone
+    -jobId
+    -AadhaarNo
+     -Email
+     -occupation
+     -permanentAddress
+     -Dno
+     -due_date
+     -dateOfJoining
+     -occupants
+     -rentAmount
+	-monthsAdvance
+     -dueAmount
+
+      +getEmail()
+      +setEmail()
+      +getTenantId()
+      +setTenantId()
+      +getDno()
+      +setDno()
+      +getDue_Amount()
+      +setDue_Amount()
+     +getTenantsList()
+      +setTenantsList()
+     +getVehicleList()
+     +setVehicleList()
+     +getAmenitiesList()
+     +setAmenitiesList()
+      +getJob_id() 
+      +setJob_id()
+      +getAadhaar_no() 
+      +setAadhaar_no()
+      +getPerm_address() 
+      +setPerm_address()
+      +getDue_date()
+      +setDue_date()
+      +getRent_Amount()
+      +setRent_Amount()
+
+
+}
+
+@enduml
