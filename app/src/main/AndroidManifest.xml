@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rma.myapplication">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".ProfessionalInfo"
             android:exported="false" />
@@ -37,7 +42,7 @@
             android:name=".TenantInput"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Properties"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

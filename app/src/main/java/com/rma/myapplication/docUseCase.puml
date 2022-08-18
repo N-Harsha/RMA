@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+actor "User" as fc
+rectangle RMA {
+  usecase "Create a new Property" as UC1
+  usecase "Add a new Tenant" as UC2
+  usecase "Fill Tenant Details" as UC3
+  usecase "Update Details" as UC4
+  usecase "View Tenant Details" as UC5
+  usecase "Add a Transaction for tenant" as UC6
+  usecase "Add Amenities for a tenant" as UC7
+
+}
+
+fc --> UC1
+fc --> UC2
+fc --> UC3
+fc --> UC4
+fc --> UC5
+fc --> UC6
+
+@enduml
